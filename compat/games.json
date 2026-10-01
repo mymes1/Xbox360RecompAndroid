@@ -8,7 +8,10 @@
       "title": "Sonic Unleashed",
       "region": "NTSC-U",
       "status": "ingame",
-      "issues": ["shadow rendering artifacts", "occasional audio dropout"],
+      "issues": [
+        "shadow rendering artifacts",
+        "occasional audio dropout"
+      ],
       "notes": "Reference game from UnleashedRecomp-Android. Best tested title.",
       "tested_version": "0.1.0",
       "contributor": "community"
@@ -18,7 +21,10 @@
       "title": "Halo 3",
       "region": "NTSC-U",
       "status": "boots",
-      "issues": ["GPU shader recompiler incomplete", "missing audio voices"],
+      "issues": [
+        "GPU shader recompiler incomplete",
+        "missing audio voices"
+      ],
       "notes": "Reaches title screen. Gameplay not yet reachable.",
       "tested_version": "0.1.0",
       "contributor": "community"
@@ -28,7 +34,10 @@
       "title": "Minecraft: Xbox 360 Edition",
       "region": "NTSC-U",
       "status": "boots",
-      "issues": ["texture detile issues", "input not fully mapped"],
+      "issues": [
+        "texture detile issues",
+        "input not fully mapped"
+      ],
       "notes": "",
       "tested_version": "0.1.0",
       "contributor": "community"
@@ -38,10 +47,28 @@
       "title": "Geometry Wars: Retro Evolved 2",
       "region": "XBLA",
       "status": "nothing",
-      "issues": ["XEX encryption not fully resolved for XBLA"],
+      "issues": [
+        "XEX encryption not fully resolved for XBLA"
+      ],
       "notes": "XBLA LIVE container support in progress.",
       "tested_version": "0.1.0",
       "contributor": "community"
+    },
+    {
+      "title_id": "4E4D0862",
+      "title": "Dragon Ball Xenoverse",
+      "region": "ANY",
+      "status": "nothing",
+      "issues": [
+        "VMX128 (altivec primaries 5/6) is not implemented: the encodings in the authoritative table do not fit the AltiVec field split, so those words are reported as unimplemented instead of guessed",
+        "fres/frsqrte/fre are unimplemented (approximate ops; not faked)",
+        "Xenos PM4 -> Vulkan pipeline incomplete; Mali (SM-X110) path never executed on device",
+        "XAudio2 voices incomplete",
+        "ARM64 code generation is off by default until it has been validated on hardware (X360_XBOX_JIT=1 to enable)"
+      ],
+      "notes": "Alternate title id 4E4D0841. Entry added by the runtime work in this branch: the loader, decoder and HLE table are prepared for this title, but it has never been booted - 'nothing' reflects the absence of any verified run, not a failure observed on hardware.",
+      "tested_version": "0.1.0",
+      "contributor": "arena-agent"
     }
   ]
 }

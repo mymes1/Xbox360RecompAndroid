@@ -398,7 +398,9 @@ bool load_profile_from_file(const std::string& path, TitleProfile* out) {
  *
  * IMPORTANT: support = Untested. This entry only enables identification, game
  * data-directory handling and diagnostics. It is NOT a claim that the game runs.
- * (See compat/xenoverse.json and docs/xenoverse.md for the honest status.)
+ * (See the 4E4D0862 entry in compat/games.json and docs/JIT_STATUS.md for the
+ * honest status: nothing has been booted on a device yet, so the support level stays
+ * Untested and the gaps are listed rather than papered over.)
  */
 const TitleProfile& xenoverse_profile() {
   static TitleProfile p = [] {
