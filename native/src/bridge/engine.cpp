@@ -9,6 +9,7 @@
 #include "../../include/hle/hle_kernel.h"
 #include "../../include/gpu/gpu_layer.h"
 #include <android/log.h>
+#include <cstring>
 #include <string>
 #include <filesystem>
 #include <sys/mman.h>

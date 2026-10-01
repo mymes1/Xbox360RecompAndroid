@@ -5,6 +5,8 @@
 #include "../../include/gpu/gpu_layer.h"
 #include <cstring>
 #include <vector>
+#include <chrono>
+#include <algorithm>
 #include <android/log.h>
 
 #define LOG_TAG "X360:VK"
@@ -66,14 +68,13 @@ bool GpuLayer::createInstance() {
         VK_KHR_SURFACE_EXTENSION_NAME,
         "VK_KHR_android_surface",
     };
-    const char* layers[] = {};
 
     VkInstanceCreateInfo ci{};
     ci.sType                   = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     ci.pApplicationInfo        = &appInfo;
     ci.enabledExtensionCount   = 2;
     ci.ppEnabledExtensionNames = extensions;
-    ci.enabledLayerCount       = 0;
+    ci.enabledLayerCount       = 0;   // no validation layers in release builds
 
     return vkCreateInstance(&ci, nullptr, &m_instance) == VK_SUCCESS;
 }
